@@ -26,6 +26,14 @@ Instala las librerías necesarias mediante `pip`:
 pip install requests python-telegram-bot
 2. Configuración de CredencialesEl script nba_bot.py requiere tus credenciales de API y Telegram.Asegúrate de configurar las siguientes variables en la sección 1. CONFIGURACIÓN del archivo nba_bot.py:VariableValor de Ejemplo (Tus valores)NotasTELEGRAM_BOT_TOKEN8424595859:AAGLSCUR3DwGStRvvSoZlseX8Y2CPIvqDiEToken de tu Bot de Telegram.TELEGRAM_CHAT_ID-1003320799916ID de tu canal/chat de Telegram (debe empezar por -100).RAPIDAPI_KEYdb43641f98msh7e84415090d14e7p1c529cjsn7bfa5538b221Tu clave de RapidAPI.Automatización en Windows (Programador de Tareas)El bot está diseñado para ser ejecutado directamente por el Programador de Tareas (Task Scheduler) de Windows.1. El Archivo ejecutar_bot.batEste archivo contiene la ruta absoluta del ejecutable de Python y del script para evitar cualquier conflicto de rutas. Debe estar ubicado en la carpeta del proyecto.Contenido del archivo ejecutar_bot.bat:Bash@echo off
 REM Ejecución Directa de Python con Rutas Absolutas
-"C:\Users\Fernando\AppData\Local\Programs\Python\Python313\python.exe" "C:\Users\Fernando\Documents\proyectos\ResultadosNBA\nba_bot.py"
+"C:\Users\[TUUSUARIO]\AppData\Local\Programs\Python\Python313\python.exe" "C:\Users\[TUUSUARIO]\Documents\proyectos\ResultadosNBA\nba_bot.py"
 timeout /t 5 /nobreak
-2. Configuración de la Tarea ProgramadaPara asegurar la ejecución automática cada 15 minutos:Abre el Programador de Tareas (Task Scheduler).Haz clic en "Crear Tarea..." (Create Task...).Pestaña General: Asigna el nombre NBA_Bot_Directo y marca "Ejecutar con los privilegios más altos".Pestaña Desencadenadores (Triggers):Crea un nuevo desencadenador Diario.Configura "Repetir cada" a 15 minutos y "durante" a 12 horas.Pestaña Acciones (Actions):Crea una nueva acción: Iniciar un programa.Programa/script: Introduce la ruta absoluta del archivo .bat: C:\Users\Fernando\Documents\proyectos\ResultadosNBA\ejecutar_bot.batIniciar en (opcional): DEJAR ESTE CAMPO COMPLETAMENTE VACÍO para evitar conflictos de rutas.Guarda la tarea. El bot se ejecutará automáticamente a la hora programada.
+2. Configuración de la Tarea ProgramadaPara asegurar la ejecución automática cada 15 minutos:
+Abre el Programador de Tareas (Task Scheduler).
+Haz clic en "Crear Tarea..." (Create Task...).
+Pestaña General: Asigna el nombre NBA_Bot_Directo y marca "Ejecutar con los privilegios más altos".
+Pestaña Desencadenadores (Triggers):Crea un nuevo desencadenador Diario.
+Configura "Repetir cada" a 15 minutos y "durante" a 12 horas.
+Pestaña Acciones (Actions):Crea una nueva acción: Iniciar un programa.
+Programa/script: Introduce la ruta absoluta del archivo .bat: C:\Users\[TUUSUARIO]]\Documents\proyectos\ResultadosNBA\ejecutar_bot.bat
+Iniciar en (opcional): DEJAR ESTE CAMPO COMPLETAMENTE VACÍO para evitar conflictos de rutas.Guarda la tarea. El bot se ejecutará automáticamente a la hora programada.
