@@ -6,9 +6,9 @@ from datetime import datetime
 # --- 1. CONFIGURACIÓN (TUS DATOS) ---
 
 # Datos de Telegram
-TELEGRAM_BOT_TOKEN = '8424595859:AAGLSCUR3DwGStRvvSoZlseX8Y2CPIvqDiE'
+TELEGRAM_BOT_TOKEN = '*****5859:AAGLSCUR3DwGStRvvSoZlseX8Y2CPIvqDiE'
 # ID de Chat (el número que empieza con -100...)
-TELEGRAM_CHAT_ID = -1003320799916 
+TELEGRAM_CHAT_ID = -1003320799*** 
 
 # Datos de RapidAPI
 RAPIDAPI_HOST = 'nba-api-free-data.p.rapidapi.com'
@@ -142,4 +142,5 @@ async def main():
 
 if __name__ == "__main__":
     # Ejecutamos la función principal asíncrona
+
     asyncio.run(main())
